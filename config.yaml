@@ -1,0 +1,21 @@
+source: webcam
+backend: yolo
+confidence: 0.5
+weights: yolov8n.pt
+save: false
+log: false
+headless: false
+tracking:
+  enabled: false
+  iou_threshold: 0.3
+  max_missed: 10
+alert:
+  enabled: false
+  class: person
+  cooldown_seconds: 10
+detection:
+  classes: []
+  frame_skip: 1
+  roi: null
+output:
+  directory: output

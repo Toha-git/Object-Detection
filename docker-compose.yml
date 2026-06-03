@@ -1,0 +1,23 @@
+services:
+  api:
+    build: .
+    ports:
+      - "5000:5000"
+    env_file:
+      - .env
+    volumes:
+      - ./output:/app/output
+      - ./models:/app/models
+      - ./runs:/app/runs
+
+  dashboard:
+    build: .
+    command: ["python", "-m", "streamlit", "run", "dashboard/app.py", "--server.address=0.0.0.0"]
+    ports:
+      - "8501:8501"
+    env_file:
+      - .env
+    volumes:
+      - ./output:/app/output
+      - ./models:/app/models
+      - ./runs:/app/runs

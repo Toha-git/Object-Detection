@@ -1,0 +1,12 @@
+# YOLOv8 dataset template.
+# Update `path` after running prepare_dataset.py if you choose a different output directory.
+path: dataset_yolo
+train: images/train
+val: images/val
+
+# Example 3-class dataset.
+nc: 3
+names:
+  - person
+  - car
+  - dog
