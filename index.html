@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Object Detection Dashboard</title>
+    <style>
+      :root {
+        color-scheme: light;
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        color: #202331;
+        background: #f7f9fb;
+      }
+
+      body {
+        margin: 0;
+      }
+
+      main {
+        max-width: 1040px;
+        margin: 0 auto;
+        padding: 72px 24px;
+      }
+
+      h1 {
+        font-size: clamp(2.4rem, 6vw, 5.25rem);
+        line-height: 1;
+        margin: 0 0 20px;
+        letter-spacing: 0;
+      }
+
+      p {
+        max-width: 760px;
+        font-size: 1.1rem;
+        line-height: 1.7;
+        color: #4a5163;
+      }
+
+      .actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin: 32px 0 44px;
+      }
+
+      a {
+        color: inherit;
+      }
+
+      .button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 44px;
+        padding: 0 18px;
+        border: 1px solid #cfd6e3;
+        border-radius: 8px;
+        background: #ffffff;
+        text-decoration: none;
+        font-weight: 700;
+      }
+
+      .button.primary {
+        border-color: #1f6feb;
+        background: #1f6feb;
+        color: #ffffff;
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 16px;
+      }
+
+      .card {
+        border: 1px solid #dbe2ea;
+        border-radius: 8px;
+        background: #ffffff;
+        padding: 20px;
+      }
+
+      .card h2 {
+        margin: 0 0 8px;
+        font-size: 1.05rem;
+      }
+
+      code {
+        display: block;
+        overflow-x: auto;
+        border-radius: 8px;
+        background: #111827;
+        color: #f8fafc;
+        padding: 16px;
+        line-height: 1.6;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Object Detection</h1>
+      <p>
+        A Python and OpenCV object detection project with YOLOv8, SSD MobileNet,
+        Haar Cascades, SORT-style tracking, CSV logging, Flask API, Streamlit
+        dashboard, training scripts, Docker support, and tests.
+      </p>
+
+      <div class="actions">
+        <a class="button primary" href="https://github.com/Toha-git/Object-Detection">View Repository</a>
+        <a class="button" href="https://github.com/Toha-git/Object-Detection/blob/main/README.md">Read Setup Guide</a>
+      </div>
+
+      <div class="grid">
+        <section class="card">
+          <h2>Run the Dashboard</h2>
+          <code>cd object_detection<br />python3 -m streamlit run dashboard/app.py</code>
+        </section>
+        <section class="card">
+          <h2>Run Detection</h2>
+          <code>python main.py --source webcam --backend yolo --track</code>
+        </section>
+        <section class="card">
+          <h2>Train Custom YOLOv8</h2>
+          <code>python train/train.py --data train/dataset.yaml --epochs 50</code>
+        </section>
+      </div>
+    </main>
+  </body>
+</html>

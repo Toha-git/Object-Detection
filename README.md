@@ -451,6 +451,11 @@ docker compose up dashboard
 
 Webcam access inside Docker needs host-specific device forwarding. Uploaded images and videos are the most portable Docker workflow.
 
+## GitHub Pages
+
+This repository includes a static `index.html` so GitHub Pages can show a project landing page.
+GitHub Pages cannot run the Python, Flask, or Streamlit app itself. Use Streamlit Community Cloud, Render, Railway, a VPS, or Docker for a live hosted dashboard.
+
 ## macOS Camera Troubleshooting
 
 If webcam access fails on macOS:
